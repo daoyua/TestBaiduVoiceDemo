@@ -1,5 +1,6 @@
 package testmircosoftcom.futuremove.electronic.testbaiduvoicedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -8,6 +9,7 @@ import com.baidu.speech.asr.SpeechConstant;
 import java.util.HashMap;
 import java.util.Map;
 
+import testmircosoftcom.futuremove.electronic.testbaiduvoicedemo.sample.MainActivity2;
 import testmircosoftcom.futuremove.electronic.testbaiduvoicedemo.wakeup.IStatus;
 import testmircosoftcom.futuremove.electronic.testbaiduvoicedemo.wakeup.IWakeupListener;
 import testmircosoftcom.futuremove.electronic.testbaiduvoicedemo.wakeup.MyWakeup;
@@ -17,15 +19,16 @@ public class MainActivity extends ActivityCommon implements IStatus {
     protected MyWakeup myWakeup;
     private int status = STATUS_NONE;
     private static final String TAG = "ActivityWakeUp";
+
     public MainActivity() {
         this(R.raw.normal_wakeup);
     }
 
 
-
     public MainActivity(int textId) {
         super(textId, R.layout.common_without_setting);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +36,9 @@ public class MainActivity extends ActivityCommon implements IStatus {
         IWakeupListener listener = new RecogWakeupListener(handler);
         myWakeup = new MyWakeup(this, listener);
 
-
+startActivity(new Intent(MainActivity.this,MainActivity2.class));
     }
+
     // 点击“开始识别”按钮
     private void start() {
         Map<String, Object> params = new HashMap<String, Object>();

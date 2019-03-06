@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,6 +32,10 @@
             android:name="com.baidu.speech.SECRET_KEY"
             android:value="Dz5zgshx6NajaMrrXfuZSFoX3i5yrees"/>
         <!--<activity android:name=".ActivityCommon"></activity>-->
+        <activity android:name=".sample.MainActivity2"></activity>
+        <activity android:name=".sample.SynthActivity"></activity>
+        <activity android:name=".sample.SaveFileActivity"></activity>
+        <activity android:name=".sample.MiniActivity"></activity>
     </application>
 
 </manifest>
