@@ -36,6 +36,7 @@
         <activity android:name=".sample.SynthActivity"></activity>
         <activity android:name=".sample.SaveFileActivity"></activity>
         <activity android:name=".sample.MiniActivity"></activity>
+        <activity android:name=".record.ActivityAbstractRecog"></activity>
     </application>
 
 </manifest>
